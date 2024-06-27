@@ -37,7 +37,7 @@ export type ScreenProps<
   options?: TOptions | ((props: {
     route: RouteProp<ParamListBase, string>;
     navigation: any;
-  }) => ScreenOptions);
+  }) => TOptions);
 
   listeners?:
     | ScreenListeners<State, EventMap>

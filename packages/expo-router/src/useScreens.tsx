@@ -34,7 +34,10 @@ export type ScreenProps<
    */
   redirect?: boolean;
   initialParams?: { [key: string]: any };
-  options?: TOptions;
+  options?: TOptions | ((props: {
+    route: RouteProp<ParamListBase, string>;
+    navigation: any;
+  }) => ScreenOptions);
 
   listeners?:
     | ScreenListeners<State, EventMap>
